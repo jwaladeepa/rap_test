@@ -1,29 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<abapGit version="v1.0.0" serializer="LCL_OBJECT_DDLS" serializer_version="v1.0.0">
- <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
-<CDSProjectionView>
-    <Annotations>
-        <AccessControl>authorizationCheck: NOT_REQUIRED</AccessControl>
-        <MetadataAllowExtensions>true</MetadataAllowExtensions>
-        <UI>
-            <HeaderInfo>
-                <TypeName>Employee Status</TypeName>
-                <TypeNamePlural>Employee Statuses</TypeNamePlural>
-                <Title>
-                    <Type>STANDARD</Type>
-                    <Value>EmpStatus</Value>
-                </Title>
-            </HeaderInfo>
-        </UI>
-    </Annotations>
-    <Definition>
-        <ViewName>ZC_EmpStatus_ENH</ViewName>
-        <ProjectionOn>ZI_EmpStatus_ENH</ProjectionOn>
-        <Fields>
-            <Field key="true">StatusID</Field>
-            <Field key="true">Empid</Field>
-            <Field>EmpStatus</Field>
-            <Field association="true" redirectedTo="parent ZC_Employee_ENH">_Employee</Field>
-        </Fields>
-    </Definition>
-</CDSProjectionView>
+<?xml version="1.0" encoding="utf-8"?>
+<abapGit>
+  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+    <asx:values>
+      <OBJ_NAME>ZC_EMPSTATUS_ENH</OBJ_NAME>
+      <CLSNAME/>
+      <DESCRIPT>CDS Projection View for Employee Status</DESCRIPT>
+      <DEVCLASS>$ABAPGIT</DEVCLASS>
+      <LANGU>E</LANGU>
+      <SRCURI>ZC_EMPSTATUS_ENH.ddl</SRCURI>
+      <OBJ_TYPE>DCLS</OBJ_TYPE>
+      <CATEGORY>DCLS</CATEGORY>
+      <AUTHOR>YOUR_USER</AUTHOR>
+    </asx:values>
+  </asx:abap>
+</abapGit>
