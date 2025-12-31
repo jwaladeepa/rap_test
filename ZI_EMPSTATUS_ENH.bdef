@@ -1,0 +1,19 @@
+
+strict ( 2 );
+
+define behavior for ZI_EmpStatus_enh alias EmpStatus
+  persistent table ZEMPSTATUS_ENH
+  lock dependent by _Employee
+  authorization dependent by _Employee
+{
+  update;
+  delete;
+  field ( readonly ) Empid;
+  field ( numbering: managed, readonly ) StatusID;
+  association _Employee;
+  mapping for ZEMPSTATUS_ENH {
+    EmpID     = Emp_ID;
+    StatusID  = Status_ID;
+    EmpStatus = Emp_Status;
+  }
+}

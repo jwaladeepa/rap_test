@@ -1,0 +1,21 @@
+
+managed implementation in class zbp_i_employee_enh unique;
+strict ( 2 );
+
+define behavior for ZI_Employee_enh alias Employee
+  persistent table ZEMPLOYEE_ENH
+  lock master
+  authorization master ( instance )
+{
+  create;
+  update;
+  delete;
+  association _EmpStatus { create; }
+  field ( numbering : managed , readonly ) EmpID;
+  mapping for ZEMPLOYEE_ENH {
+    EmpID     = Emp_ID;
+    EmpName   = Emp_Name;
+    Department= Dept;
+    EmpStatus = Emp_Status;
+  }
+}

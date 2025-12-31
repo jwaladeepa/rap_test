@@ -1,0 +1,9 @@
+
+projection;
+strict ( 2 );
+
+define behavior for ZC_EmpStatus_ENH {
+  use update;
+  use delete;
+  use association _Employee;
+}
